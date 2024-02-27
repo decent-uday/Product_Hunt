@@ -1,5 +1,6 @@
 package com.Uday.ProductHunt.model;
 
+import jakarta.validation.constraints.Positive;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,10 +16,9 @@ public class products {
 
     @Id
     private String _id;
-
     private double stars;
-
     private String productName;
+    @Positive
     private int reviews;
     private String description;
     private String category;
